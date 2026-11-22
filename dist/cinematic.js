@@ -62,57 +62,14 @@
     img.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}});
   });
 
-  const benchData={
-    language:{kicker:"Qwen3.5-4B · 文本模型",number:"0.44 <small>s</small>",title:"常驻中文短请求",note:"4 / 4 中文指令通过",image:"model-qa.png",alt:"板端现场问答界面"},
-    vision:{kicker:"Qwen2.5-VL-7B prune · 视觉语言",number:"1.86 <small>s</small>",title:"相机问答 · 模型常驻",note:"同题冷加载 41.81 s",image:"overview.png",alt:"多模态图像与板端推理界面"},
-    speech:{kicker:"Qwen3-ASR-0.6B · 语音识别",number:"26.0–28.9<small>%</small>",title:"中文会议字符错误率",note:"2 段录音 · 7 人 · 各 5 分 30 秒",image:"voice.png",alt:"语音转写与声谱界面"}
-  };
-  const benchTabs=[...document.querySelectorAll("[data-bench]")];
-  benchTabs.forEach(button=>button.addEventListener("click",()=>{
-    const d=benchData[button.dataset.bench];
-    benchTabs.forEach(b=>{const selected=b===button;b.setAttribute("aria-selected",String(selected));b.tabIndex=selected?0:-1});
-    document.getElementById("benchmark-panel").setAttribute("aria-labelledby",button.id);
-    document.getElementById("bench-kicker").textContent=d.kicker;
-    document.getElementById("bench-number").innerHTML=d.number;
-    document.getElementById("bench-title").textContent=d.title;
-    document.getElementById("bench-note").textContent=d.note;
-    const img=document.getElementById("bench-image");
-    img.src="assets/"+d.image;img.alt=d.alt;
-    img.classList.remove("is-switching");
-    void img.offsetWidth;
-    if(!reduced.matches)img.classList.add("is-switching");
-  }));
-  const benchmarkPreview=document.getElementById("bench-image");
-  benchmarkPreview.tabIndex=0;benchmarkPreview.setAttribute("role","button");
-  const openBench=()=>{
-    const modal=document.getElementById("image-dialog");
-    if(modal.open)return;
-    imageTrigger=benchmarkPreview;
-    document.getElementById("full-image").src=benchmarkPreview.src;
-    document.getElementById("full-image").alt=benchmarkPreview.alt;
-    modal.showModal();document.body.style.overflow="hidden";
-  };
-  benchmarkPreview.addEventListener("click",openBench);
-  benchmarkPreview.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openBench()}});
 
-  // Keep tab-content headlines compact after switching dynamic content.
-  if(typeof platforms!=="undefined"){
-    platforms.terminal.title="现场终端";
-    platforms.studio.title="工程工作台";
-  }
+  if(typeof platforms!=="undefined"){platforms.terminal.title="现场终端";platforms.studio.title="工程工作台";}
   if(typeof scenarios!=="undefined"){
     const short={production:"生产区域",fan:"风机巡检",fixed:"固定监测",pump:"泵组巡检",electrical:"配电巡检",handover:"班组交接"};
-    Object.keys(short).forEach(k=>{scenarios[k].title=short[k]});
+    Object.keys(short).forEach(k=>scenarios[k].title=short[k]);
   }
-  if(typeof stages!=="undefined"){
-    ["多模态采集","时间对齐","板端分析","缺陷整改","报告归档"].forEach((title,i)=>{if(stages[i])stages[i].title=title});
-  }
-  if(typeof modelContent!=="undefined"){
-    const short={reason:"现场智能问答",vision:"图像理解",speech:"语音转写",video:"视频理解"};
-    Object.keys(short).forEach(k=>{modelContent[k].title=short[k]});
-  }
-
-  const targets=document.querySelectorAll(".showcase-heading,.showcase-card,.benchmark-select button,.benchmark-panel,.section-head,.performance-heading");
+  if(typeof stages!=="undefined")["多模态采集","时间关联","现场分析","处置复核","报告归档"].forEach((title,i)=>{if(stages[i])stages[i].title=title;});
+  const targets=document.querySelectorAll(".showcase-heading,.showcase-card,.section-head,.performance-heading,.story-section,.fusion-machine,.advantage-grid article");
   if(!reduced.matches&&"IntersectionObserver" in window){
     const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
       if(entry.isIntersecting){entry.target.classList.add("motion-visible");observer.unobserve(entry.target)}

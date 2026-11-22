@@ -191,4 +191,39 @@ if(!reduced.matches&&"IntersectionObserver" in window){
  elements.forEach(el=>{el.classList.add("reveal");observer.observe(el)});
  document.documentElement.classList.add("motion-ready");
 }
+
+// 精细动态：技术规格入场与推理数字滚动，均支持减少动态效果。
+const specSection=$("#technical");
+if(specSection && !reduced.matches && "IntersectionObserver" in window){
+ const specObserver=new IntersectionObserver(entries=>{
+  for(const entry of entries)if(entry.isIntersecting){
+   specSection.classList.add("tech-in-view");
+   specObserver.unobserve(specSection);
+  }
+ },{threshold:.10});
+ specObserver.observe(specSection);
+}
+if(!reduced.matches && "IntersectionObserver" in window){
+ const animatedStats=$$(".performance-primary .metric-value strong");
+ const numberObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(!entry.isIntersecting)return;
+   numberObserver.unobserve(entry.target);
+   const el=entry.target;
+   const finalText=el.textContent.trim();
+   const value=Number(finalText);
+   if(!Number.isFinite(value))return;
+   const decimals=(finalText.split(".")[1]||"").length;
+   const started=performance.now(),duration=880;
+   const step=now=>{
+    const t=Math.min(1,(now-started)/duration);
+    const ease=1-Math.pow(1-t,3);
+    el.textContent=t===1?finalText:(value*ease).toFixed(decimals);
+    if(t<1)requestAnimationFrame(step);
+   };
+   requestAnimationFrame(step);
+  });
+ },{threshold:.7});
+ animatedStats.forEach(el=>numberObserver.observe(el));
+}
 })();

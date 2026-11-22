@@ -155,13 +155,42 @@
 <div class="benefit"><div><h3>巡检闭环</h3><p>让处置、复核和报告形成连续流程。</p></div><img src="assets/report.png" alt="巡检事件分析报告界面" loading="lazy"></div>
 </div>
 </section>
-<section class="technical section-wrap" id="technical">
-<details><summary>查看技术规格 <span aria-hidden="true">＋</span></summary>
-<div class="technical-grid">
-<div><h3>板端计算</h3><p>RK3588 · RK1828</p></div>
-<div><h3>声学采集</h3><p>16 kHz · 六通道 PCM</p></div>
-<div><h3>信号处理</h3><p>FFT · Welch · STFT</p></div>
-<div><h3>模型能力</h3><p>Qwen3.5 · Qwen2.5-VL · Qwen3-ASR</p></div>
+<section class="technical section-wrap" id="technical" aria-labelledby="technical-title">
+<div class="technical-title"><h2 id="technical-title">技术规格</h2></div>
+<div class="tech-highlights" aria-label="关键硬件参数">
+<div><strong>RK3588</strong><span>ARM64 主控</span></div>
+<div><strong>RK1828</strong><span>板端推理加速</span></div>
+<div><strong>6 <em>通道</em></strong><span>16 kHz PCM 声学采集</span></div>
+<div><strong>4 <em>种</em></strong><span>声学成像模式</span></div>
+</div>
+<details class="tech-disclosure" open>
+<summary>完整硬件与系统参数 <span aria-hidden="true">＋</span></summary>
+<div class="technical-grid tech-group-grid">
+<section class="tech-group" aria-label="计算与部署"><h3>计算与部署</h3><dl>
+<div><dt>主控平台</dt><dd>RK3588 · ARM64</dd></div>
+<div><dt>推理平台</dt><dd>RK1828</dd></div>
+<div><dt>操作系统</dt><dd>Ubuntu 24.04 LTS</dd></div>
+<div><dt>本地运行</dt><dd>采集 · 问答 · 归档</dd></div>
+</dl></section>
+<section class="tech-group" aria-label="多模态接入"><h3>多模态接入</h3><dl>
+<div><dt>可见光</dt><dd>预览 · 检测 · 分割</dd></div>
+<div><dt>声音</dt><dd>16 kHz · 六通道 PCM</dd></div>
+<div><dt>红外热像</dt><dd>温度分布 · 极值 · 趋势</dd></div>
+<div><dt>补充资料</dt><dd>视频 · 图片 · 音频 · CSV</dd></div>
+</dl></section>
+<section class="tech-group" aria-label="信号与空间分析"><h3>信号与空间分析</h3><dl>
+<div><dt>时域分析</dt><dd>波形 · RMS · 数字电平</dd></div>
+<div><dt>频域分析</dt><dd>FFT · Welch · STFT</dd></div>
+<div><dt>声学成像</dt><dd>延时求和 · SRP-PHAT · MVDR</dd></div>
+<div><dt>时间对齐</dt><dd>默认容差 250 ms</dd></div>
+</dl></section>
+<section class="tech-group" aria-label="智能分析与工程管理"><h3>智能分析与工程管理</h3><dl>
+<div><dt>板端模型</dt><dd>Qwen3.5 · Qwen2.5-VL · Qwen3-VL · Qwen3-ASR</dd></div>
+<div><dt>多模态理解</dt><dd>图文问答 · 视频理解</dd></div>
+<div><dt>语音记录</dt><dd>分轨 · 转写 · 回听</dd></div>
+<div><dt>巡检管理</dt><dd>设备 · 测点 · 任务 · 整改</dd></div>
+<div><dt>输出与归档</dt><dd>PDF · CSV · .miproj</dd></div>
+</dl></section>
 </div></details>
 </section>
 <section class="closing"><h2>让现场，有据可循。</h2><a href="#top">返回顶部 <span aria-hidden="true">↑</span></a></section>

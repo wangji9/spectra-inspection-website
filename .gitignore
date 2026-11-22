@@ -1,0 +1,7 @@
+.openai/
+.env
+.env.*
+node_modules/
+__pycache__/
+repository.json
+*.log

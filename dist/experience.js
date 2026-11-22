@@ -1,10 +1,10 @@
 // Sequential workflow: motion only runs while the section is in view.
 const stages=[
-{label:'CAPTURE',title:'把此刻的现场，<br>完整留下。',desc:'选择设备与测点，同时采集画面、声音和热像。原始信息从一开始就有明确归属。',tags:['现场画面','六麦声音','红外热像'],image:'overview.png',alt:'现场采集与多模态预览界面'},
-{label:'ALIGN',title:'让多路信息，<br>回到同一时刻。',desc:'以事件时刻为基准匹配画面、声音与热像，逐路核对时间偏差，把分散的资料组织成同一份事件证据。',tags:['事件基准','采样时间','证据关联'],image:'event.png',alt:'事件详情与多路证据时间对齐界面'},
-{label:'ANALYSE',title:'循着信号，<br>找到复查的方向。',desc:'观察波形、频谱和声学空间响应，结合现场画面与测量读数，形成可引用的分析结果。',tags:['信号分析','空间响应','板端问答'],image:'acoustic.png',alt:'声学空间响应分析界面'},
-{label:'RESOLVE',title:'让每一个异常，<br>都有后续。',desc:'将异常关联设备与测点，分派整改任务，记录处理经过。复核结果随同原始事件一起保留。',tags:['缺陷分派','整改记录','复核关闭'],image:'defect.png',alt:'缺陷整改与复核记录界面'},
-{label:'ARCHIVE',title:'交接的不只是结论，<br>还有完整依据。',desc:'把检查读数、现场证据与复核意见组织成报告。下一次交接，可从报告继续追溯原始现场。',tags:['PDF 报告','版本归档','证据回查'],image:'report.png',alt:'事件分析报告完整页面'}
+{label:'CAPTURE',title:'把此刻的现场，<br>完整留下。',desc:'',tags:['现场画面','六麦声音','红外热像'],image:'overview.png',alt:'现场采集与多模态预览界面'},
+{label:'ALIGN',title:'让多路信息，<br>回到同一时刻。',desc:'',tags:['事件基准','采样时间','证据关联'],image:'event.png',alt:'事件详情与多路证据时间对齐界面'},
+{label:'ANALYSE',title:'循着信号，<br>找到复查的方向。',desc:'',tags:['信号分析','空间响应','板端问答'],image:'acoustic.png',alt:'声学空间响应分析界面'},
+{label:'RESOLVE',title:'让每一个异常，<br>都有后续。',desc:'',tags:['缺陷分派','整改记录','复核关闭'],image:'defect.png',alt:'缺陷整改与复核记录界面'},
+{label:'ARCHIVE',title:'交接的不只是结论，<br>还有完整依据。',desc:'',tags:['PDF 报告','版本归档','证据回查'],image:'report.png',alt:'事件分析报告完整页面'}
 ];
 let stageIndex=0,stageVisible=false,stagePaused=matchMedia('(prefers-reduced-motion: reduce)').matches,stageTimer=null;
 const controls=document.querySelector('.journey-controls'),stageButtons=[...document.querySelectorAll('[data-step]')],toggle=document.querySelector('.journey-toggle');

@@ -1,69 +1,172 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="zh-CN">
-<head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#f5f5f7" name="theme-color"/><meta content="观澜 SPECTRA 多模态巡检平台，将画面、声音与热像汇聚为可追溯的现场证据。" name="description"/><title>观澜 SPECTRA · 让现场，有据可循</title><link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/><link href="style.css" rel="stylesheet"/><link href="refinements.css" rel="stylesheet"/><link href="modalities.css" rel="stylesheet"/><link href="visuals.css" rel="stylesheet"/><link href="cinematic.css" rel="stylesheet"/><link href="narrative.css" rel="stylesheet"/></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="观澜 SPECTRA：面向工业现场的板端大模型与多模态智能巡检系统。">
+<title>观澜 SPECTRA｜让现场真正被理解</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="assets/overview.png">
+<link rel="stylesheet" href="editorial.css">
+<script src="editorial.js" defer></script>
+</head>
 <body>
-<a class="skip" href="#main">跳至主要内容</a>
-<header class="global"><div class="nav-wrap"><a aria-label="观澜 SPECTRA 首页" class="brand" href="#"><svg aria-hidden="true" viewbox="0 0 32 32"><path d="M3 19c5-13 9-13 13 0s8 13 13-6M3 12c5 13 9 13 13 0s8-13 13 6"></path></svg><span>观澜 <b>SPECTRA</b></span></a><nav aria-label="主导航" id="nav"><a href="#story">现状与问题</a><a href="#models">模型能力</a><a href="#capabilities">多模态感知</a><a href="#fusion">融合理解</a><a href="#advantages">产品优势</a></nav><a class="nav-action" href="#fusion">探索方案</a><button aria-controls="nav" aria-expanded="false" aria-label="打开导航" class="menu"><i></i><i></i></button></div></header>
+<a class="skip-link" href="#main">跳转到主要内容</a>
+<header class="site-header">
+<div class="nav-inner">
+<a href="#top" class="brand" aria-label="观澜 SPECTRA 首页"><svg viewBox="0 0 42 32" aria-hidden="true"><path d="M2 20C9 1 13 1 21 18S34 33 40 10M2 12c8 18 13 18 20 1S34 0 40 19"></path></svg>观澜 <strong>SPECTRA</strong></a>
+<nav class="main-nav" aria-label="页面导航">
+<a href="#challenge">现状与问题</a><a href="#models">大模型</a><a href="#sensing">多模态感知</a><a href="#fusion">融合理解</a><a href="#benefits">核心优势</a>
+</nav>
+<a href="#workflow" class="nav-end">探索方案 <span aria-hidden="true">↗</span></a>
+</div>
+</header>
 <main id="main">
-<section class="hero" id="overview"><div class="hero-copy"><p class="eyebrow">观澜 SPECTRA</p><h1>让现场，<span>真正被理解。</span></h1><p class="hero-desc single-line">多模态感知 × 板端大模型</p><div class="hero-links"><a class="button" href="#story">了解解决方案</a><a class="text-button" href="#models">探索模型能力</a></div></div>
-<div class="product-stage"><div class="ambient"></div><div class="device"><div class="camera"></div><img alt="观澜平台板端实测界面：可见光、红外热像、声音频谱和声学成像同时显示" fetchpriority="high" height="850" src="assets/overview.png" width="1440"/><div class="device-bottom">S P E C T R A</div></div><div class="stand"></div><div class="stand-foot"></div><div class="hero-stage-controls" aria-label="首页画面切换">
- <button type="button" class="hero-arrow" data-hero-step="-1" aria-label="上一张产品画面">‹</button>
- <div class="hero-slide-status"><span class="hero-current-label" id="hero-current-label">多模态总览</span><div class="hero-dots" aria-label="选择产品画面">
- <button type="button" data-hero-dot="0" aria-label="多模态总览" aria-current="true"></button>
- <button type="button" data-hero-dot="1" aria-label="红外热像" aria-current="false"></button>
- <button type="button" data-hero-dot="2" aria-label="声学成像" aria-current="false"></button>
- <button type="button" data-hero-dot="3" aria-label="视觉识别" aria-current="false"></button>
- </div></div><button type="button" class="hero-arrow" data-hero-step="1" aria-label="下一张产品画面">›</button>
- </div></div>
+<section class="hero" id="top" aria-labelledby="hero-title">
+<div class="hero-copy">
+<h1 id="hero-title">让现场，<br><span>真正被理解。</span></h1>
+<p class="lead">从设备信号，到有依据的智能判断。</p>
+<div class="hero-actions"><a href="#models" class="primary-link">探索板端大模型 <span aria-hidden="true">↗</span></a><a href="#challenge" class="secondary-link">了解解决方案 <span aria-hidden="true">↓</span></a></div>
+</div>
+<div class="hero-art">
+<img id="hero-image" src="assets/overview.png" alt="观澜多模态巡检平台实际界面" width="1440" height="850" fetchpriority="high">
+</div>
+<div class="hero-switcher" aria-label="切换产品界面">
+<button type="button" data-hero="0" class="is-active" aria-pressed="true">多模态总览</button>
+<button type="button" data-hero="1" aria-pressed="false">视觉识别</button>
+<button type="button" data-hero="2" aria-pressed="false">红外热像</button>
+<button type="button" data-hero="3" aria-pressed="false">声学成像</button>
+</div>
 </section>
-<section class="story-section section" id="story"><div class="chapter-marker"><span>01</span><span>THE CHALLENGE</span></div><div class="story-title"><h2 class="compact-heading">现场数据很多，<br><em>真正的关联判断却很难。</em></h2></div><div class="story-layout">
-<div class="story-evidence"><div class="story-textline"><span>目前现状</span><h3>多源数据分散</h3></div><div class="story-composite"><img src="assets/vision.png" alt="可见光巡检界面" loading="lazy" width="1153" height="722"><img src="assets/acoustic.png" alt="现场声音分析界面" loading="lazy" width="1334" height="740"><img src="assets/thermal.png" alt="热成像巡检界面" loading="lazy" width="950" height="333"></div><div class="story-captions"><span>可见光</span><span>声学</span><span>热像</span></div></div>
-<div class="story-problems"><div class="story-textline"><span>核心问题</span><h3>数据与决策之间存在断点</h3></div><div class="story-issue"><span>01</span><strong>发现异常</strong><small>缺乏跨模态印证</small></div><div class="story-issue"><span>02</span><strong>识别原因</strong><small>依赖人工逐项排查</small></div><div class="story-issue"><span>03</span><strong>现场交接</strong><small>依据难以连续追踪</small></div></div></div></section>
-<section class="models-section" id="models"><div class="section"><div class="section-head"><div><p class="eyebrow">02 / ON-DEVICE AI</p><h2 class="compact-heading">大模型先理解现场</h2></div></div><div aria-label="板端模型能力" class="model-tabs" role="tablist"><button aria-controls="model-panel" aria-selected="true" data-model="reason" id="model-reason" role="tab">综合问答</button><button aria-controls="model-panel" aria-selected="false" data-model="vision" id="model-vision" role="tab" tabindex="-1">图像理解</button><button aria-controls="model-panel" aria-selected="false" data-model="speech" id="model-speech" role="tab" tabindex="-1">语音转写</button><button aria-controls="model-panel" aria-selected="false" data-model="video" id="model-video" role="tab" tabindex="-1">视频理解</button></div><div aria-labelledby="model-reason" class="model-panel" id="model-panel" role="tabpanel"><div class="model-copy"><span class="model-name" id="model-name">Qwen3.5</span><h3 id="model-title">现场智能问答</h3><p class="single-line" id="model-desc">工程资料 · 测量读数 · 现场问题</p><div class="model-inputs" id="model-inputs"><span>工程资料</span><span>测量读数</span><span>现场问题</span></div></div><div class="model-media"><img alt="板端现场问答界面" height="261" id="model-image" loading="lazy" src="assets/model-qa.png" width="470"/></div></div></div></section>
-<section class="performance-section" id="performance"><div class="section">
-<div class="section-head narrative-head"><div><p class="eyebrow">ON-DEVICE INFERENCE</p><h2 class="compact-heading">板端推理表现</h2></div><p class="section-inline-label">短请求 · 图像问答 · 中文指令</p></div>
-<div class="metric-focus-grid">
-<article class="metric-focus metric-primary"><span>Qwen3.5-4B</span><strong><b data-count="0.44" data-decimals="2">0.44</b><small> s</small></strong><h3>常驻短请求</h3><div class="metric-halo" aria-hidden="true"></div></article>
-<article class="metric-focus"><span>Qwen2.5-VL-7B prune</span><strong><b data-count="1.86" data-decimals="2">1.86</b><small> s</small></strong><h3>相机问答</h3></article>
-<article class="metric-focus"><span>Qwen3.5-4B</span><strong><b data-count="4">4</b><small> / 4</small></strong><h3>中文指令通过</h3></article></div>
-<div class="speed-capability"><div class="speed-symbol" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><div class="speed-title"><p class="eyebrow">MODEL THROUGHPUT</p><h3>生成与输入速率</h3></div><div class="speed-items"><div><strong>Decode</strong><span>tokens/s</span></div><div><strong>Prefill</strong><span>tokens/s</span></div></div><p class="speed-availability">板端运行时采集</p></div></div></section>
-<section class="intro section" id="capabilities"><div class="section-head narrative-head"><div><p class="eyebrow">03 / MULTIMODAL SENSING</p><h2 class="compact-heading">感知现场的每一种信号</h2></div><p class="section-inline-label">画面 · 声音 · 热像 · 语音</p></div><div class="sensing-grid">
-<article class="sensing-card"><div class="sensing-media"><img src="assets/vision.png" alt="视觉检测界面" loading="lazy" width="1153" height="722"></div><div class="sensing-foot"><span>01 / VISION</span><h3>视觉识别</h3></div></article>
-<article class="sensing-card"><div class="sensing-media"><img src="assets/acoustic.png" alt="声学成像界面" loading="lazy" width="1334" height="740"></div><div class="sensing-foot"><span>02 / ACOUSTIC</span><h3>声学感知</h3></div></article>
-<article class="sensing-card"><div class="sensing-media"><img src="assets/thermal-detail.png" alt="红外热像界面" loading="lazy" width="1360" height="820"></div><div class="sensing-foot"><span>03 / THERMAL</span><h3>红外热像</h3></div></article></div></section>
-<section class="showcase-section section" id="gallery" aria-label="多模态界面展示">
-<div class="showcase-heading"><div><p class="eyebrow">VISUAL SHOWCASE</p><h2 class="compact-heading">多模态界面展示</h2></div>
-<div class="showcase-controls"><button type="button" data-showcase="-1" aria-label="上一组界面">←</button><button type="button" data-showcase="1" aria-label="下一组界面">→</button></div></div>
-<div class="showcase-track" tabindex="0" aria-label="可横向浏览的产品界面">
-<article class="showcase-card"><img src="assets/thermal-detail.png" alt="红外热像实时监测界面" width="1360" height="820" loading="lazy"><div class="showcase-meta"><span>01 / THERMAL</span><h3>红外热像</h3></div></article>
-<article class="showcase-card"><img src="assets/acoustic.png" alt="声学成像可视化界面" width="1334" height="740" loading="lazy"><div class="showcase-meta"><span>02 / ACOUSTIC</span><h3>声学成像</h3></div></article>
-<article class="showcase-card"><img src="assets/vision.png" alt="视觉目标检测界面" width="1153" height="722" loading="lazy"><div class="showcase-meta"><span>03 / VISION</span><h3>视觉智能</h3></div></article>
-<article class="showcase-card"><img src="assets/voice.png" alt="语音声谱与发言轨道界面" width="1349" height="802" loading="lazy"><div class="showcase-meta"><span>04 / SPEECH</span><h3>语音记录</h3></div></article>
-</div></section>
-<section class="intelligence section" id="intelligence"><div class="section-head"><div><p class="eyebrow">可见光与视频理解</p><h2 class="compact-heading">视觉理解</h2></div></div><div class="visual-layout"><div class="visual-screen"><img alt="板端视觉目标检测界面" height="722" loading="lazy" src="assets/vision.png" width="1153"/></div><div class="modality-features"><article><h3>对象识别</h3></article><article><h3>区域观察</h3></article><article><h3>多帧理解</h3></article></div></div></section>
-<section class="thermal-section" id="thermal"><div class="section"><div class="section-head"><div><p class="eyebrow">红外热成像</p><h2 class="compact-heading">红外测温</h2></div></div><div class="thermal-layout"><div class="thermal-screen"><img alt="可见光、热像与温度趋势监控界面" height="820" loading="lazy" src="assets/thermal-detail.png" width="1360"/></div><div class="modality-features"><article><h3>温度分布</h3></article><article><h3>持续观察</h3></article><article><h3>规则触发</h3></article></div></div></div></section>
-<section class="acoustic" id="acoustic"><div class="section acoustic-inner"><p class="eyebrow">听见，也能看见</p><h2 class="compact-heading">声学定位</h2><p class="acoustic-desc single-line">六麦阵列 · 四种算法 · 画面叠加</p><div class="acoustic-image"><img alt="板端声学成像实测界面：空间响应叠加相机画面，并显示方位和通道电平" height="740" loading="lazy" src="assets/acoustic.png" width="1334"/></div></div></section>
-<section class="analysis section" id="analysis"><div class="section-head"><div><p class="eyebrow">信号背后，自有线索</p><h2 class="compact-heading">声音信号分析</h2></div></div>
-<div class="analysis-board"><div class="chart-toolbar"><div class="chart-title"><span class="blue-square"></span><div><b id="plot-title">FFT 幅值频谱</b><small id="plot-sub">Hann window · 单边幅值谱</small></div></div><div aria-label="信号分析模式" class="segmented" role="tablist"><button aria-controls="plot-panel" aria-selected="true" data-plot="fft" id="tab-fft" role="tab">FFT 频谱</button><button aria-controls="plot-panel" aria-selected="false" data-plot="wave" id="tab-wave" role="tab" tabindex="-1">时域波形</button><button aria-controls="plot-panel" aria-selected="false" data-plot="welch" id="tab-welch" role="tab" tabindex="-1">Welch 功率谱</button></div></div><div aria-labelledby="tab-fft" id="plot-panel" role="tabpanel"><div class="plot-container" id="signal-chart"></div></div><div class="chart-footer"><span class="experience-label">信号分析 · 交互体验</span><span>f<sub>s</sub> = 16 kHz <em> / </em> N = 4096</span><button id="reset-chart">重置指针</button></div></div>
+<section class="challenge section-wrap" id="challenge" aria-labelledby="challenge-title">
+<div class="section-intro">
+<h2 id="challenge-title">数据分散在各处。<br><span>问题却发生在同一现场。</span></h2>
+</div>
+<div class="challenge-shots">
+<figure><img src="assets/vision.png" loading="lazy" alt="视觉识别的现场画面"><figcaption>可见光</figcaption></figure>
+<figure><img src="assets/acoustic.png" loading="lazy" alt="声学分析的现场画面"><figcaption>声学</figcaption></figure>
+<figure><img src="assets/thermal-detail.png" loading="lazy" alt="红外热成像现场画面"><figcaption>热像</figcaption></figure>
+</div>
+<div class="challenge-points" aria-label="现场巡检的核心难点">
+<div><h3>异常难关联</h3><p>同一问题，散落在不同信号里。</p></div>
+<div><h3>分析费时间</h3><p>需要反复切换界面与资料。</p></div>
+<div><h3>结果难追溯</h3><p>判断与原始证据难以统一。</p></div>
+</div>
 </section>
-<section class="voice-section section" id="voice"><div class="section-head"><div><p class="eyebrow">语音记录与交接</p><h2 class="compact-heading">语音识别</h2></div></div><div class="voice-screen"><img alt="波形、声谱、发言轨道与转写界面" height="802" loading="lazy" src="assets/voice.png" width="1349"/></div></section>
-<section class="alignment section" id="alignment"><div class="section-head"><div><p class="eyebrow">同一时刻，同一件事</p><h2 class="compact-heading">跨模态时间同步</h2></div></div><div class="alignment-grid"><div class="timing-story"><span class="stat-number">40<span> ms</span></span><h3>热像告警联测 · 最大时差</h3><p class="single-line">多源数据 · 关联采样</p></div><div class="timing-chart"><div class="plot-container" id="timing-chart"></div></div></div></section>
-<section class="fusion-section" id="fusion"><div class="section"><div class="chapter-marker fusion-marker"><span>04</span><span>CROSS-MODAL REASONING</span></div><div class="section-head narrative-head"><div><h2 class="compact-heading">让大模型理解全部现场证据</h2></div><p class="section-inline-label">感知 → 关联 → 理解 → 输出</p></div><div class="fusion-machine">
-<div class="fusion-inputs"><div class="fusion-small"><img src="assets/vision.png" alt="可见光信号" loading="lazy" width="1153" height="722"><span>画面</span></div><div class="fusion-small"><img src="assets/acoustic.png" alt="声学信号" loading="lazy" width="1334" height="740"><span>声音</span></div><div class="fusion-small"><img src="assets/thermal-detail.png" alt="热成像信号" loading="lazy" width="1360" height="820"><span>热像</span></div></div>
-<div class="fusion-center"><div class="fusion-orbit"><div class="fusion-orbit-inner"><span>AI</span><strong>多模态理解</strong></div></div><div class="fusion-pulses" aria-hidden="true"><i></i><i></i><i></i></div></div>
-<div class="fusion-output"><div class="fusion-tabs" role="tablist" aria-label="融合分析结果"><button type="button" role="tab" aria-controls="fusion-panel" aria-selected="true" id="fusion-tab-event" data-fusion="event">事件关联</button><button type="button" role="tab" aria-controls="fusion-panel" aria-selected="false" id="fusion-tab-qa" data-fusion="qa" tabindex="-1">证据问答</button><button type="button" role="tab" aria-controls="fusion-panel" aria-selected="false" id="fusion-tab-report" data-fusion="report" tabindex="-1">生成报告</button></div><div class="fusion-screen" role="tabpanel" aria-labelledby="fusion-tab-event" id="fusion-panel"><img id="fusion-image" src="assets/event.png" alt="多路信息关联事件视图" loading="lazy"></div><h3 id="fusion-result">跨模态事件关联</h3></div></div><div class="fusion-footline"><span>来自现场的多源信号</span><span>同一事件 · 同一时刻</span><span>支持复核的输出</span></div></div></section>
-<section class="platform section" id="platform"><div class="center-head"><p class="eyebrow">一个平台，贯穿现场与处置</p><h2 class="compact-heading">从采集到工程管理</h2></div><div aria-label="产品平台" class="platform-tabs segmented" role="tablist"><button aria-controls="platform-panel" aria-selected="true" data-platform="terminal" id="tab-terminal" role="tab">观澜 Terminal</button><button aria-controls="platform-panel" aria-selected="false" data-platform="studio" id="tab-studio" role="tab" tabindex="-1">观澜 Studio</button></div><div aria-labelledby="tab-terminal" class="platform-body" id="platform-panel" role="tabpanel"><div class="platform-copy"><p class="overline" id="platform-label">现场感知与板端分析</p><h3 id="platform-title">现场采集终端</h3><p class="single-line" id="platform-desc">采集 · 检测 · 本地推理</p><ul id="platform-list"><li>多模态采集</li><li>板端问答</li><li>离线归档</li></ul></div><div class="platform-screen"><img alt="Terminal 工程采集总览界面" height="850" id="platform-image" loading="lazy" src="assets/overview.png" width="1440"/></div></div></section>
-<section class="journey" id="workflow"><div class="section journey-inner"><div class="center-head"><p class="eyebrow">一次巡检，连贯发生</p><h2 class="compact-heading">一条完整的巡检流程</h2></div><div class="journey-controls"><div aria-label="巡检工作流程" class="journey-steps" role="tablist"><button aria-controls="journey-panel" aria-selected="true" data-step="0" id="step-capture" role="tab"><span>采集</span></button><button aria-controls="journey-panel" aria-selected="false" data-step="1" id="step-align" role="tab" tabindex="-1"><span>对齐</span></button><button aria-controls="journey-panel" aria-selected="false" data-step="2" id="step-analyse" role="tab" tabindex="-1"><span>分析</span></button><button aria-controls="journey-panel" aria-selected="false" data-step="3" id="step-resolve" role="tab" tabindex="-1"><span>整改</span></button><button aria-controls="journey-panel" aria-selected="false" data-step="4" id="step-archive" role="tab" tabindex="-1"><span>归档</span></button></div><button aria-label="暂停流程动画" aria-pressed="false" class="journey-toggle">暂停</button></div><div aria-labelledby="step-capture" class="journey-panel" id="journey-panel" role="tabpanel"><div class="journey-copy"><p class="overline" id="journey-label">CAPTURE</p><h3 id="journey-title">多模态采集</h3><p class="single-line" id="journey-desc"></p><div class="journey-tags" id="journey-tags"><span>现场画面</span><span>六麦声音</span><span>红外热像</span></div></div><div class="journey-media"><img alt="现场采集与多模态预览界面" height="850" id="journey-image" loading="lazy" src="assets/overview.png" width="1440"/></div></div></div></section>
-<section class="scenarios section" id="scenarios"><div class="section-head"><div><p class="eyebrow">深入真实工作</p><h2 class="compact-heading">面向真实工业现场</h2></div></div><div aria-label="应用场景" class="scenario-tabs" role="tablist"><button aria-controls="scenario-panel" aria-selected="true" data-scenario="pump" id="tab-pump" role="tab">泵组与电机</button><button aria-controls="scenario-panel" aria-selected="false" data-scenario="electrical" id="tab-electrical" role="tab" tabindex="-1">配电设备</button><button aria-controls="scenario-panel" aria-selected="false" data-scenario="production" id="tab-production" role="tab" tabindex="-1">生产区域</button><button aria-controls="scenario-panel" aria-selected="false" data-scenario="fan" id="tab-fan" role="tab" tabindex="-1">厂房风机</button><button aria-controls="scenario-panel" aria-selected="false" data-scenario="fixed" id="tab-fixed" role="tab" tabindex="-1">固定观察点</button><button aria-controls="scenario-panel" aria-selected="false" data-scenario="handover" id="tab-handover" role="tab" tabindex="-1">班组交接</button></div><div aria-labelledby="tab-pump" class="scenario-panel" id="scenario-panel" role="tabpanel"><div class="scenario-photo"><img alt="泵房巡检场景示意" height="960" id="scenario-image" loading="lazy" src="assets/pump.jpg" width="1440"/></div><div class="scenario-content"><span class="overline" id="scenario-label">PUMPS &amp; MOTORS</span><h3 id="scenario-title">泵组巡检</h3><p class="single-line" id="scenario-desc">频谱定位 · 温度复核</p><div class="scenario-result"><small>现场依据</small><p class="single-line" id="scenario-evidence">录音 · 频段 · 热像</p></div></div></div></section>
-<section class="advantages-section section" id="advantages"><div class="chapter-marker"><span>06</span><span>WHY SPECTRA</span></div><div class="section-head narrative-head"><h2 class="compact-heading">核心优势</h2><p class="section-inline-label">现场可用 · 结果可查</p></div><div class="advantage-grid">
-<article><div class="advantage-photo"><img src="assets/overview.png" alt="板端多模态平台界面" loading="lazy"></div><h3>端侧部署</h3></article>
-<article><div class="advantage-photo"><img src="assets/model-qa.png" alt="工程现场问答界面" loading="lazy"></div><h3>模型推理</h3></article>
-<article><div class="advantage-photo"><img src="assets/event.png" alt="多路数据关联界面" loading="lazy"></div><h3>事件联动</h3></article>
-<article><div class="advantage-photo"><img src="assets/report.png" alt="巡检报告及证据界面" loading="lazy"></div><h3>流程闭环</h3></article></div></section>
-<section class="specifications section" id="specifications"><div class="section-head"><div><p class="eyebrow">技术规格</p><h2 class="compact-heading">关键规格</h2></div></div><div class="spec-highlights"><div><strong>RK3588</strong><span>现场采集与显示</span></div><div><strong>RK1828</strong><span>板端推理加速</span></div><div><strong>6 <em>通道</em></strong><span>麦克风阵列采集</span></div><div><strong>4 <em>种</em></strong><span>声学成像模式</span></div></div><details class="spec-details"><summary>展开完整技术参数 <span aria-hidden="true">＋</span></summary><div class="spec-table"><div class="spec-group"><h3>计算与部署</h3><dl><div><dt>主控平台</dt><dd>RK3588 · ARM64</dd></div><div><dt>推理平台</dt><dd>RK1828</dd></div><div><dt>操作系统</dt><dd>Ubuntu 24.04 LTS</dd></div><div><dt>本地运行</dt><dd>采集 · 问答 · 归档</dd></div></dl></div><div class="spec-group"><h3>多模态接入</h3><dl><div><dt>可见光</dt><dd>预览 · 检测 · 分割</dd></div><div><dt>声音</dt><dd>16 kHz · 六通道 PCM</dd></div><div><dt>红外热像</dt><dd>温度分布 · 极值 · 趋势</dd></div><div><dt>补充资料</dt><dd>视频 · 图片 · 音频 · CSV</dd></div></dl></div><div class="spec-group"><h3>信号与空间分析</h3><dl><div><dt>时域分析</dt><dd>波形 · RMS · 数字电平</dd></div><div><dt>频域分析</dt><dd>FFT · Welch · STFT</dd></div><div><dt>声学成像</dt><dd>延时求和 · SRP-PHAT · MVDR</dd></div><div><dt>时间对齐</dt><dd>默认容差 250 ms</dd></div></dl></div><div class="spec-group"><h3>智能分析与业务管理</h3><dl><div><dt>板端模型</dt><dd><span class="spec-token">Qwen3.5</span><span class="spec-token">Qwen2.5-VL</span><span class="spec-token">Qwen3-VL</span><span class="spec-token">Qwen3-ASR</span></dd></div><div><dt>多模态理解</dt><dd>图文问答 · 视频理解</dd></div><div><dt>语音记录</dt><dd>分轨 · 转写 · 回听</dd></div><div><dt>巡检管理</dt><dd>设备 · 测点 · 任务 · 整改</dd></div><div><dt>输出与归档</dt><dd>PDF · CSV · .miproj</dd></div></dl></div></div></details></section>
-<section class="explore section" id="explore"><p class="eyebrow">观澜 SPECTRA</p><h2 class="compact-heading">让现场判断，更有依据</h2><p class="single-line">多模态巡检，尽在观澜。</p><div class="hero-links"><button class="button" data-tour="">开启产品导览</button><a class="text-button" href="https://github.com/wangji9/FieldInspectionAssistant" rel="noopener noreferrer" target="_blank">查看技术项目</a></div></section>
-</main><footer><div class="footer-inner"><a class="brand" href="#">观澜 <b>SPECTRA</b></a><p class="single-line">现场感知 · 板端分析 · 证据管理</p><div class="footer-bottom"><span>© 2026 观澜 SPECTRA</span><a href="#overview">返回顶部</a></div></div></footer>
-<dialog id="detail-dialog"><button aria-label="关闭详情" class="dialog-close">×</button><p class="eyebrow" id="dialog-label"></p><h2 id="dialog-title"></h2><div id="dialog-body"></div></dialog>
-<dialog class="image-dialog" id="image-dialog"><button aria-label="关闭大图" class="image-close">×</button><img alt="" id="full-image"/></dialog>
-<script src="app.js"></script><script src="experience.js"></script><script src="modalities.js"></script><script src="visuals.js"></script><script src="cinematic.js"></script><script src="narrative.js"></script></body></html>
+<section class="models section-wide" id="models" aria-labelledby="models-title">
+<div class="section-wrap">
+<div class="section-intro"><h2 id="models-title">大模型，<br><span>成为现场的分析能力。</span></h2></div>
+<div class="model-layout">
+<div class="model-menu" role="tablist" aria-label="选择模型能力">
+<button type="button" role="tab" aria-controls="model-panel" data-model="question" aria-selected="true" id="model-tab-question" tabindex="0">现场问答</button>
+<button type="button" role="tab" aria-controls="model-panel" data-model="image" aria-selected="false" id="model-tab-image" tabindex="-1">图像理解</button>
+<button type="button" role="tab" aria-controls="model-panel" data-model="video" aria-selected="false" id="model-tab-video" tabindex="-1">视频理解</button>
+<button type="button" role="tab" aria-controls="model-panel" data-model="speech" aria-selected="false" id="model-tab-speech" tabindex="-1">语音转写</button>
+</div>
+<div class="model-panel" id="model-panel" role="tabpanel" aria-labelledby="model-tab-question">
+<div class="model-text"><h3 id="model-feature-title">问现场问题，<br>得到有依据的回答。</h3><p id="model-feature-note">文字、图像与工程数据可以共同参与分析。</p></div>
+<img id="model-feature-image" src="assets/model-qa.png" alt="板端智能问答实际界面" loading="lazy">
+</div>
+</div>
+</div>
+</section>
+<section class="performance section-wrap" id="performance" aria-labelledby="performance-title">
+<div class="section-intro"><h2 id="performance-title">推理性能。<br><span>用数据说话。</span></h2></div>
+<div class="performance-primary">
+<div class="metric"><div class="metric-value"><strong>64.94</strong><span>tokens/s</span></div><h3>回答生成速度</h3></div>
+<div class="metric"><div class="metric-value"><strong>452.22</strong><span>tokens/s</span></div><h3>输入处理速度</h3></div>
+</div>
+<div class="performance-secondary">
+<div class="metric-sm"><strong>1107.8 <span>ms</span></strong><span>首字用时</span></div>
+<div class="metric-sm"><strong>1757.3 <span>ms</span></strong><span>本次总用时</span></div>
+<div class="metric-sm"><strong>321</strong><span>输入 tokens</span></div>
+<div class="metric-sm"><strong>39</strong><span>输出 tokens</span></div>
+</div>
+<p class="performance-source">图像问答 · 单次板端实测</p>
+</section>
+<section class="sensing section-wrap" id="sensing" aria-labelledby="sensing-title">
+<div class="section-intro"><h2 id="sensing-title">让多种感知，<br><span>共同还原现场。</span></h2></div>
+<div class="sensor-feature">
+<div class="sensor-copy"><span class="sensor-index">01</span><h3>视觉与视频</h3><p>识别对象，理解过程。</p></div>
+<img src="assets/vision.png" loading="lazy" alt="现场视觉目标检测界面">
+</div>
+<div class="sensor-feature sensor-feature-reverse">
+<div class="sensor-copy"><span class="sensor-index">02</span><h3>红外热像</h3><p>看见温差，观察变化。</p></div>
+<img src="assets/thermal-detail.png" loading="lazy" alt="热像与温度分布趋势界面">
+</div>
+<div class="sensor-feature">
+<div class="sensor-copy"><span class="sensor-index">03</span><h3>声学成像</h3><p>从声音线索，定位异常方向。</p></div>
+<img src="assets/acoustic.png" loading="lazy" alt="六通道声学分析与空间成像界面">
+</div>
+<div class="sensor-feature sensor-feature-reverse">
+<div class="sensor-copy"><span class="sensor-index">04</span><h3>语音记录</h3><p>识别发言，回查现场交接。</p></div>
+<img src="assets/voice.png" loading="lazy" alt="波形、发言轨道和语音转写界面">
+</div>
+</section>
+<section class="signal-section" id="signal" aria-labelledby="signal-title">
+<div class="section-wrap">
+<div class="section-intro signal-title"><h2 id="signal-title">声音的变化，<br><span>在频谱里清晰呈现。</span></h2></div>
+<div class="signal-controls" role="tablist" aria-label="信号处理方法">
+<button type="button" role="tab" id="signal-tab-fft" data-signal="fft" aria-selected="true" aria-controls="signal-panel">FFT 幅值谱</button>
+<button type="button" role="tab" id="signal-tab-time" data-signal="time" aria-selected="false" aria-controls="signal-panel" tabindex="-1">时域波形</button>
+<button type="button" role="tab" id="signal-tab-welch" data-signal="welch" aria-selected="false" aria-controls="signal-panel" tabindex="-1">Welch 功率谱</button>
+</div>
+<div id="signal-panel" role="tabpanel" aria-labelledby="signal-tab-fft">
+<div id="signal-plot" class="signal-plot" aria-label="可切换的声学信号分析图表"></div>
+</div>
+<p class="signal-foot">16 kHz 采样 · 合成演示信号</p>
+</div>
+</section>
+<section class="fusion section-wrap" id="fusion" aria-labelledby="fusion-title">
+<div class="section-intro"><h2 id="fusion-title">从多源信号，<br><span>走向同一次理解。</span></h2></div>
+<div class="fusion-summary"><img src="assets/overview.png" loading="lazy" alt="多模态同步采集与板端分析平台界面"></div>
+<div class="fusion-selector" role="tablist" aria-label="选择多模态融合应用">
+<button type="button" role="tab" id="fusion-tab-event" data-fusion="event" aria-controls="fusion-panel" aria-selected="true">关联事件</button>
+<button type="button" role="tab" id="fusion-tab-question" data-fusion="question" aria-controls="fusion-panel" aria-selected="false" tabindex="-1">综合问答</button>
+<button type="button" role="tab" id="fusion-tab-report" data-fusion="report" aria-controls="fusion-panel" aria-selected="false" tabindex="-1">生成报告</button>
+</div>
+<div class="fusion-display" id="fusion-panel" role="tabpanel" aria-labelledby="fusion-tab-event">
+<div><h3 id="fusion-heading">把同一事件的证据关联起来。</h3><p id="fusion-summary">画面、声音与热像，同步进入分析。</p></div>
+<img id="fusion-image" src="assets/event.png" loading="lazy" alt="现场事件关联记录界面">
+</div>
+</section>
+<section class="workflow-section" id="workflow" aria-labelledby="workflow-title">
+<div class="section-wrap">
+<div class="section-intro"><h2 id="workflow-title">从发现异常，<br><span>到完成一次交接。</span></h2></div>
+<div class="workflow-tabs" role="tablist" aria-label="巡检工作流程">
+<button type="button" role="tab" id="flow-tab-0" data-flow="0" aria-controls="workflow-panel" aria-selected="true"><span>01</span>采集</button>
+<button type="button" role="tab" id="flow-tab-1" data-flow="1" aria-controls="workflow-panel" aria-selected="false" tabindex="-1"><span>02</span>关联</button>
+<button type="button" role="tab" id="flow-tab-2" data-flow="2" aria-controls="workflow-panel" aria-selected="false" tabindex="-1"><span>03</span>分析</button>
+<button type="button" role="tab" id="flow-tab-3" data-flow="3" aria-controls="workflow-panel" aria-selected="false" tabindex="-1"><span>04</span>整改</button>
+<button type="button" role="tab" id="flow-tab-4" data-flow="4" aria-controls="workflow-panel" aria-selected="false" tabindex="-1"><span>05</span>归档</button>
+</div>
+<div class="workflow-display" id="workflow-panel" role="tabpanel" aria-labelledby="flow-tab-0">
+<div class="workflow-copy"><h3 id="workflow-heading">留下现场的完整信息。</h3><p id="workflow-summary">采集画面、声音与温度变化。</p></div>
+<img src="assets/overview.png" id="workflow-image" loading="lazy" alt="多模态巡检现场采集">
+</div>
+</div>
+</section>
+<section class="benefits section-wrap" id="benefits" aria-labelledby="benefits-title">
+<div class="section-intro"><h2 id="benefits-title">把智能带到现场。<br><span>把证据留在流程里。</span></h2></div>
+<div class="benefit-list">
+<div class="benefit"><div><h3>板端智能</h3><p>模型与传感协同工作。</p></div><img src="assets/overview.png" alt="本地分析和多模态终端界面" loading="lazy"></div>
+<div class="benefit"><div><h3>事件可追溯</h3><p>从分析结果回到原始记录。</p></div><img src="assets/defect.png" alt="巡检缺陷复核记录界面" loading="lazy"></div>
+<div class="benefit"><div><h3>巡检闭环</h3><p>让处置、复核和报告形成连续流程。</p></div><img src="assets/report.png" alt="巡检事件分析报告界面" loading="lazy"></div>
+</div>
+</section>
+<section class="technical section-wrap" id="technical">
+<details><summary>查看技术规格 <span aria-hidden="true">＋</span></summary>
+<div class="technical-grid">
+<div><h3>板端计算</h3><p>RK3588 · RK1828</p></div>
+<div><h3>声学采集</h3><p>16 kHz · 六通道 PCM</p></div>
+<div><h3>信号处理</h3><p>FFT · Welch · STFT</p></div>
+<div><h3>模型能力</h3><p>Qwen3.5 · Qwen2.5-VL · Qwen3-ASR</p></div>
+</div></details>
+</section>
+<section class="closing"><h2>让现场，有据可循。</h2><a href="#top">返回顶部 <span aria-hidden="true">↑</span></a></section>
+</main>
+<footer class="footer"><span>观澜 <strong>SPECTRA</strong></span><span>© 2026</span><a href="https://github.com/wangji9/FieldInspectionAssistant" target="_blank" rel="noopener noreferrer">技术项目</a></footer>
+<dialog class="image-viewer" id="image-viewer" aria-label="查看完整产品图片"><button class="viewer-close" aria-label="关闭图片">×</button><img alt="" id="viewer-image"></dialog>
+</body>
+</html>
